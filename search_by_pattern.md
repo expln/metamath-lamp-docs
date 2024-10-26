@@ -69,12 +69,12 @@ In other words, the matching expression must be of the same length.
 
 * `$a ph -> ps` - this pattern uses the modifier `a`.
 It restricts the search engine to check only the assertion part of each frame. 
-Hypotheses will not be taking into account when matching.
+Hypotheses will not be taken into account when matching.
 
   
 * `$h ph -> ps` - this pattern uses the modifier `h`.
 It will match all frames having at least one hypothesis matching the pattern `ph -> ps`.
-The assertion part of frames will not be taking into account when matching.
+The assertion part of frames will not be taken into account when matching.
   
 
 * `$a+ ph -> ps` - modifiers can be combined. 
