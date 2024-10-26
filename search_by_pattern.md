@@ -52,8 +52,7 @@ if a pattern contains different variables this doesn't mean they should match di
 `|- ( th -> ( ph -> th ) )`, `|- ( ( ch -> ph ) -> ( ch -> ps ) )`, `|- ( th -> ( th -> th ) )`
 (notice that in the last example all variables are same; 
 it matches because different variables in a pattern don't require their matching content be different).
-    - Example expressions not matching this pattern: `|- ( th -> ( ph -> ch ) )`
-      (the same reason as for the previous pattern `wff -> wff`).
+    - Example expressions not matching this pattern: `|- ( th -> ( ph -> ch ) )`.
 
 
 * `$+ ph -> ps` - this pattern uses the modifier `+`. 
