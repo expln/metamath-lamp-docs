@@ -82,7 +82,8 @@ This pattern requires matching symbols to be adjacent
 and only the assertion part of each frame will be checked.
 
 
-* `$h x = A -> ph <-> ps $a ph -> ph` - this pattern consists of two sub-patterns. 
+* `$h x = A -> ph <-> ps $a ph -> ph` - this pattern consists of two sub-patterns 
+`$h x = A -> ph <-> ps` and `$a ph -> ph`. 
 For a frame to match this pattern it must have at least one hypothesis matching the first sub-pattern,
 and its assertion must match the second pattern. 
 
@@ -94,5 +95,6 @@ Same variables in different sub-patterns are not connected.
 This is a limitation because such algorithm would be difficult to implement.
 
 
-* `$h+ x = A $h+ x = A $a ph -> ph` - this pattern consists of three sub-patterns.
+* `$h+ x = A $h+ x = A $a ph -> ph` - this pattern consists of three sub-patterns
+`$h+ x = A`, `$h+ x = A`, and `$a ph -> ph`.
 The first two sub-patterns must match hypotheses. But those hypotheses must be different.
