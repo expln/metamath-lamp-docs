@@ -5,7 +5,7 @@ It is not intended to be an introduction guide.
 If you are new to the [Metamath system](https://us.metamath.org/) and/or Metamath-lamp, 
 check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
 
-#### Content:
+#### Content
 * Editor
   - [Bookmark steps](bookmark_steps.md)
   - [Delete unrelated steps](delete_unrelated_steps.md)
