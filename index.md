@@ -2,7 +2,8 @@ This is a collection of short documents describing selected features
 of [Metamath-lamp](https://github.com/expln/metamath-lamp).
 
 It is not intended to be an introduction guide. 
-If you are new to Metamath and/or Metamath-lamp, check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
+If you are new to [Metamath system](https://us.metamath.org/) and/or Metamath-lamp, 
+check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
 
 #### Content:
 * Editor
