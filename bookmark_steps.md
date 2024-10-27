@@ -1,5 +1,5 @@
 When working with a long proof it may become difficult to navigate between the steps of the proof.
-Usually only a few steps are of the interest and all other steps may be hidden.
+Usually, only a few steps are of interest, and all other steps may be hidden.
 Bookmarking allows to control what steps to show and what to hide.
 
 The screenshot below shows three buttons used for bookmarking.
