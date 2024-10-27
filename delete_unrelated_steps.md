@@ -19,4 +19,4 @@ so you don't have to select them as well.
 This works similar to garbage collector in some programming languages.
 
 There is another similar menu item "Delete unrelated steps and hypotheses".
-It works the same way, except that it will also remove unrelated hypothesis steps.
+It works the same way, except that it will also delete unrelated hypothesis steps.
