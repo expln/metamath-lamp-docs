@@ -6,11 +6,11 @@ To resolve this situation you can use the "Merge two similar steps" feature.
 You don't have to select any steps in the editor.
 Just click the "Merge two similar steps" icon button.
 
-<img src="img/merge_steps_button.png">
+<img src="../img/merge_steps_button.png">
 
 Metamath-lamp will identify steps to merge and open a dialog.
 
-<img src="img/merge_steps_dialog.png">
+<img src="../img/merge_steps_dialog.png">
 
 This dialog shows the statement which is identical in both steps.
 Also, it shows labels and justifications for each step.

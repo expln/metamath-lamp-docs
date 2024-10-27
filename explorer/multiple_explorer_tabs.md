@@ -10,4 +10,4 @@ or in a Proof Explorer tab. The selected fragment will have a button with a magn
 When you click this button, a new Explorer tab will open. 
 Its "search pattern" field will be prepopulated with the content of the selected fragment.
 
-<img src="img/search_in_new_explorer_tab.png">
+<img src="../img/search_in_new_explorer_tab.png">
