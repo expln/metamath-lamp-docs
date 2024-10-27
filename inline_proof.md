@@ -9,5 +9,5 @@ To inline the proof of a theorem:
 2. Select the "Inline proof" in the "hamburger" menu in the Editor.
 
 This will inline only a single occurrence of the theorem used by the selected step.
-If the same theorem is used by other steps, you have to do inlining for each of those steps, 
-if you want to completely get rid of the theorem in your proof.
+If the same theorem is used by other steps, you need to do inlining for each of those steps, 
+if you want to completely get rid of that theorem in your proof.

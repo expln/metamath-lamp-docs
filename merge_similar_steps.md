@@ -4,7 +4,7 @@ Metamath-lamp doesn't allow two or more steps to have the same statement.
 However, it happens frequently enough that two steps with identical statements appear in the editor.
 To resolve this situation you can use the "Merge two similar steps" feature.
 You don't have to select any steps in the editor.
-Just click the "Merge two similar steps" icon button in the Editor.
+Just click the "Merge two similar steps" icon button.
 
 <img src="img/merge_steps_button.png">
 
