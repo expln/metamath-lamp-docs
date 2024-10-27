@@ -1,3 +1,5 @@
+# Search by pattern
+
 ```
 search-pattern ::= sub-pattern*
 sub-pattern ::= ['$'modifiers] MATH-SYMBOL*
