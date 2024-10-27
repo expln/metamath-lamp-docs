@@ -1,3 +1,5 @@
+# Bookmark steps
+
 When working with a long proof it may become difficult to navigate between the steps of the proof.
 Usually, only a few steps are of interest, and all other steps may be hidden.
 Bookmarking allows to control what steps to show and what to hide.
@@ -18,3 +20,5 @@ When some steps are bookmarked you can click the third button (the one without a
 to switch between showing bookmarked steps only and showing all steps.
 
 Hypothesis steps and the goal step will always be displayed as if they were permanently bookmarked.
+
+Bookmarked steps will not be deleted by the [Delete unrelated steps](delete_unrelated_steps.md) feature.
