@@ -4,7 +4,7 @@ Bookmarking allows to control what steps to show and what to hide.
 
 The screenshot below shows three buttons used for bookmarking.
 
-<img src="img/bookmark_steps.png" width="822" alt="Buttons related to bookmarking steps">
+<img src="img/bookmark_steps.png" alt="Buttons related to bookmarking steps">
 
 In order to bookmark/unbookmark steps:
 1. select steps you want to bookmark/unbookmark
@@ -12,7 +12,7 @@ In order to bookmark/unbookmark steps:
 
 Bookmarked steps look a bit different, as shown on the screenshot below.
 
-<img src="img/how_bookmarked_steps_look_like.png" width="1022" alt="How bookmarked steps look like">
+<img src="img/how_bookmarked_steps_look_like.png" alt="How bookmarked steps look like">
 
 When some steps are bookmarked you can click the third button (the one without any sign) 
 to switch between showing bookmarked steps only and showing all steps.
