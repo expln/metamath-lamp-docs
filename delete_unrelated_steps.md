@@ -16,7 +16,7 @@ Also, hypothesis steps, the goal step, and all [bookmarked](bookmark_steps.md) s
 so you don't have to select them as well.
 2. Select the "Delete unrelated steps" in the "hamburger" menu in the Editor. 
 
-This works similar to garbage collector in programming languages.
+This works similar to garbage collector in some programming languages.
 
 There is another similar menu item "Delete unrelated steps and hypotheses".
 It works the same way, except that it will also remove unrelated hypothesis steps.
