@@ -21,7 +21,7 @@ It will match any expression having these symbols in the same order allowing int
   
   In order for a frame to match this pattern, it is enough that the assertion part of the frame matches it
   or at least one of the hypotheses (if the frame has hypotheses).
-  - Example expressions matching this pattern: `|- ( ph -> ps )`, `|- ( ( x = A ) -> ph )`.
+  - Example expressions matching this pattern: `|- ( ph -> ps )`, `|- ( x = A -> ph )`.
   - Example expressions not matching this pattern: `|- ( x = A ) -> ph`
 (this expression is not syntactically valid, 
 but it shows symbols `(`, `)`, and `->` in the not matching order).
