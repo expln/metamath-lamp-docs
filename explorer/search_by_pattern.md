@@ -21,7 +21,7 @@ It will match any expression having these symbols in the same order allowing int
   
   In order for a frame to match this pattern, it is enough that the assertion part of the frame matches it
   or at least one of the hypotheses (if the frame has hypotheses).
-  - Example expressions matching this pattern: `|- ( ph -> ps )`, `|- ( ( x = A ) -> ph )`.
+  - Example expressions matching this pattern: `|- ( ph -> ps )`, `|- ( x = A -> ph )`.
   - Example expressions not matching this pattern: `|- ( x = A ) -> ph`
 (this expression is not syntactically valid, 
 but it shows symbols `(`, `)`, and `->` in the not matching order).
@@ -31,18 +31,18 @@ but it shows symbols `(`, `)`, and `->` in the not matching order).
 But some of the constants are type codes. 
 Type codes in the pattern will match any variable of the same type. 
 Type codes will also match themselves. For example `wff` will match `wff` and `ph`.
-  - Example expressions matching this pattern: `|- ( ph -> ps )`, `|- ( ps -> ( ( x = A ) -> ph ) )`.
-  - Example expressions not matching this pattern: `|- ( ( x = A ) -> ph )`
+  - Example expressions matching this pattern: `|- ( ph -> ps )`, `|- ( ps -> ( x = A -> ph ) )`.
+  - Example expressions not matching this pattern: `|- ( x = A -> ph )`
   (this expression includes only one wff variable, whereas the pattern expects two; 
-`( x = A )` is a wff but the matching algorithm compares only individual symbols).
+`x = A` is a wff but the matching algorithm compares only individual symbols).
 
 
 * `ph -> ps` - this pattern contains variables. 
 Each variable will match a variable of the same type. 
 If each variable appears only once in a pattern, then names of variables don't matter.
     - Example expressions matching this pattern: 
-`|- ( ph -> ps )`, `|- ( ps -> ps )`, `|- ( th -> ph )`, `|- ( ch -> ( ( x = A ) -> th ) )`.
-    - Example expressions not matching this pattern: `|- ( ( x = A ) -> ph )`
+`|- ( ph -> ps )`, `|- ( ps -> ps )`, `|- ( th -> ph )`, `|- ( ch -> ( x = A -> th ) )`.
+    - Example expressions not matching this pattern: `|- ( x = A -> ph )`
       (the same reason as for the previous pattern `wff -> wff`).
 
 
@@ -60,7 +60,7 @@ it matches because different variables in a pattern don't require their matching
 * `$+ ph -> ps` - this pattern uses the modifier `+`. 
 It requires the symbols to be adjacent in the matching expression.
     - Example expressions matching this pattern: `|- ( ch -> th )`, `|- ( ch -> ( ps -> th ) )`.
-    - Example expressions not matching this pattern: `|- ( ch -> ( ( x = A ) -> th ) )`.
+    - Example expressions not matching this pattern: `|- ( ch -> ( x = A -> th ) )`.
 
 
 * `$! |- ( ph -> ps )` - this pattern uses the modifier `!`. 
