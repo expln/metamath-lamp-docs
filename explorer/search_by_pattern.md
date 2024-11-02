@@ -41,7 +41,7 @@ Type codes will also match themselves. For example `wff` will match `wff` and `p
 Each variable will match a variable of the same type. 
 If each variable appears only once in a pattern, then names of variables don't matter.
     - Example expressions matching this pattern: 
-`|- ( ph -> ps )`, `|- ( ps -> ps )`, `|- ( th -> ph )`, `|- ( ch -> ( ( x = A ) -> th ) )`.
+`|- ( ph -> ps )`, `|- ( ps -> ps )`, `|- ( th -> ph )`, `|- ( ch -> ( x = A -> th ) )`.
     - Example expressions not matching this pattern: `|- ( x = A -> ph )`
       (the same reason as for the previous pattern `wff -> wff`).
 
