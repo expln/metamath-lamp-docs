@@ -22,7 +22,7 @@ So, you can click the "USE THIS" button for the other non-empty justification.
 For such trivial cases when one of the justifications is empty, 
 Metamath-lamp can automatically select the step with non-empty justification.
 To enable this feature, set "Automatically merge similar steps" on the Settings tab.
-The auto merging feature may lead to confusing situations sometimes,
+However, the auto merging feature may lead to confusing situations sometimes,
 because it works without any notice.
 That's why it is Off by default.
 Just keep this in mind when you are confused by behaviour of the Editor, 
