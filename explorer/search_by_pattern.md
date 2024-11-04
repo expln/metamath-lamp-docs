@@ -4,7 +4,7 @@
 search-pattern ::= sub-pattern+
 sub-pattern ::= ['$'modifiers] MATH-SYMBOL+
 modifiers ::= modifier+
-modifier := '+' | '!' | 'h' | 'a'
+modifier ::= '+' | '!' | 'h' | 'a'
 ```
 
 Meaning of modifiers:
