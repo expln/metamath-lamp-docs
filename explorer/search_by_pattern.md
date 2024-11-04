@@ -1,9 +1,9 @@
 # Search by pattern
 
 ```
-search-pattern ::= sub-pattern*
-sub-pattern ::= ['$'modifiers] MATH-SYMBOL*
-modifiers ::= modifier*
+search-pattern ::= sub-pattern+
+sub-pattern ::= ['$'modifiers] MATH-SYMBOL+
+modifiers ::= modifier+
 modifier := '+' | '!' | 'h' | 'a'
 ```
 
