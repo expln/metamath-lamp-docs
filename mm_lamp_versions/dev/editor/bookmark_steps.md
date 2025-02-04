@@ -9,7 +9,7 @@ The screenshot below shows three buttons used for bookmarking.
 <img src="../img/bookmark_steps.png" alt="Buttons related to bookmarking steps">
 
 In order to bookmark/unbookmark steps:
-1. select steps you want to bookmark/unbookmark
+1. select steps you want to bookmark/unbookmark (see below how to conveniently select a range of steps)
 2. click the corresponding button (the one with `+` sign to bookmark, the one with `-` sign to unbookmark)
 
 Bookmarked steps look a bit different, as shown on the screenshot below.
@@ -23,8 +23,6 @@ Hypothesis steps and the goal step will always be displayed as if they were perm
 
 Bookmarked steps will not be deleted by the [Delete unrelated steps](delete_unrelated_steps.md) feature.
 
-In the mode of "show bookmarked steps only", there is a limitation. 
-It is not possible to move steps up/down manually.
-A partial workaround exists - [Move steps to the top or bottom](move_multiple_steps.md). 
-It allows to move multiple steps to the top or bottom of the Editor.
-If this is not enough then you need to switch to the "show all steps" mode, and move steps up/down as needed.
+If you need to select multiple consecutive steps, it is not necessary to click them one by one.
+You can select the first one and then, while holding down the Shift key, select the last one.
+As a result, all the steps located between the first and last will also be selected.
