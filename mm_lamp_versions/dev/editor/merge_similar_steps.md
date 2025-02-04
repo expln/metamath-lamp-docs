@@ -25,7 +25,7 @@ To enable this feature, set "Automatically merge similar steps" on the Settings 
 However, the auto merging feature may lead to confusing situations sometimes,
 because it works without any notice.
 That's why it is Off by default.
-Just keep this in mind when you are confused by behaviour of the Editor, 
+Just keep this in mind when you are confused by behaviour of the editor, 
 and check if the auto merge could be the reason.
 
 Sometimes, merging similar steps results in wrong order of steps.
