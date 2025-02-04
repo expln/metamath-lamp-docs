@@ -17,6 +17,6 @@ check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
   - [Move steps to the top or bottom](editor/move_multiple_steps.md)
   - [Steps to use in the Bottom-Up prover](editor/steps_in_bottom_up_prover.md)
 * Explorer
-  - [Add assertions to the Editor tab from the Explorer tab](explorer/add_assertions_to_editor_from_explorer.md)
-  - [Opening multiple Explorer tabs](explorer/multiple_explorer_tabs.md)
+  - [Add assertions to an editor tab from an explorer tab](explorer/add_assertions_to_editor_from_explorer.md)
+  - [Multiple Explorer tabs](explorer/multiple_explorer_tabs.md)
   - [Search by pattern](explorer/search_by_pattern.md)

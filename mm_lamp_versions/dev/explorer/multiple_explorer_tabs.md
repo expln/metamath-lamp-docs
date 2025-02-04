@@ -1,4 +1,4 @@
-# Opening multiple Explorer tabs
+# Multiple Explorer tabs
 
 There are two ways of opening a new Explorer tab.
 
