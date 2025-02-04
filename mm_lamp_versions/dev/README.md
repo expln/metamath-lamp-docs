@@ -9,7 +9,7 @@ check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
 * Editor
   - [Bookmark steps](editor/bookmark_steps.md)
   - [Delete unrelated steps](editor/delete_unrelated_steps.md)
-  - [Inline proof](editor/inline_proof.md)
+  - [Inline theorems](editor/inline_theorems.md)
   - [Labels for hypotheses](editor/labels_for_hypotheses.md)
   - [Merge similar steps](editor/merge_similar_steps.md)
   - [Transform: Extract: X ⇒ ( ph -> X )](editor/transform_extract_for_deduction.md)
