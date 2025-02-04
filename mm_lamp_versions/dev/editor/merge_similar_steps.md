@@ -27,3 +27,9 @@ because it works without any notice.
 That's why it is Off by default.
 Just keep this in mind when you are confused by behaviour of the Editor, 
 and check if the auto merge could be the reason.
+
+Sometimes, merging similar steps results in wrong order of steps.
+For example, step 2 depends on step 1, but step 1 is located after step 2.
+This may happen if during the merge you selected the lower step.
+This type of inconsistency can be fixed with 
+[reorder steps automatically](reorder_steps_automatically.md).

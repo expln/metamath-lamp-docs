@@ -12,6 +12,7 @@ check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
   - [Inline theorems](editor/inline_theorems.md)
   - [Labels for hypotheses](editor/labels_for_hypotheses.md)
   - [Merge similar steps](editor/merge_similar_steps.md)
+  - [Reorder steps automatically](editor/reorder_steps_automatically.md)
   - [Transform: Extract: X ⇒ ( ph -> X )](editor/transform_extract_for_deduction.md)
   - [Move steps to the top or bottom](editor/move_multiple_steps.md)
   - [Steps to use in the Bottom-Up prover](editor/steps_in_bottom_up_prover.md)
