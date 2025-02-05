@@ -1,6 +1,7 @@
 # Multiple Explorer tabs
 
-There are two ways of opening a new Explorer tab.
+In addition to the main way of opening new tabs through the "TABS" tab, 
+there are two additional ways to open a new Explorer tab.
 
 The first way is very straightforward. Just select "Open new Explorer tab" menu item in the "hamburger" menu in any 
 opened Explorer tab.
