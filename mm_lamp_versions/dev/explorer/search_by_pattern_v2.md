@@ -198,7 +198,7 @@ You can put multiple patterns to the "Pattern" text field on the Explorer tab.
 You don't need to put any additional symbols in between patterns (but at leat one whitespace).
 In that case a frame must match all the patterns to appear in the search results.
 
-When the same variable appears in multiple patterns it not necessarily will match the same variable in a frame.
+When the same variable appears in multiple patterns it will not necessarily match the same variable in a frame.
 For example, this `$+h x = y $+a y = z` is not the same as `$+ $[h x = y $] $* $[a y = z $]`
 because `$+h x = y` and `$+a y = z` are two independent pattens, therefore `y` in `$+h x = y` and `y` in `$+a y = z`
 are two independent variables.
