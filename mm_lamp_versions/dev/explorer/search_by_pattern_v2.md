@@ -78,7 +78,7 @@ These are all available flags which define the scope:
 You can combine multiple flags which don't contradict each other.
 For example, `$[+a ph -> ps $]` will find all frames which have adjacent symbols `ph -> ps` in its assertion.
 But if you want to find `$[+ ph -> ps]` in either a hypothesis or assertion 
-and specify the pattern `$[+ha ph -> ps $]` then this would be wrong.
+and you specify the pattern `$[+ha ph -> ps $]` then this will be wrong.
 For the search engine, `$[+ha ph -> ps $]` means that `$[+ ph -> ps $]` 
 must occur in a hypothesis and in the assertion at the same time,
 which is impossible. Instead, you can use the `s` flag `$[+s ph -> ps $]`.
