@@ -173,3 +173,38 @@ For example, if you want to find all frames containing different groups of symbo
 that each group must be inside a single statement, and some of the groups must be in hypotheses 
 and some in assertions,
 you can write a pattern similar to this one `$+s A B C $/ D E F $/ $[H G H I $/ J K L $] $/ $[a M N O $]`.
+
+Taking into account all the mentioned above rules related to simplifying patterns, 
+the example pattern which finds `A. x ph` implies `A. x ps` may be simplified as follows:
+
+```
+$+
+$[
+    $[h A. x ph $]
+    $|
+    $[a A. x ph $* $[ -> $| <-> $] $]
+$]
+$*
+$[a A. x ps $]
+```
+
+#### Searching with multiple patterns
+
+You can put multiple patterns to the "Pattern" text field on the Explorer tab.
+You don't need to put any additional symbols in between patterns (but at leat one whitespace).
+In that case a frame must match all the patterns to appear in the search results.
+
+When the same variable appears in multiple patterns it not necessarily will match the same variable in a frame.
+For example, this `$+h x = y $+a y = z` is not the same as `$+ $[h x = y $] $* $[a y = z $]`
+because `$+h x = y` and `$+a y = z` are two different pattens, therefore `y` in `$+h x = y` and `y` in `$+a y = z`
+are two different variables.
+
+#### Negating a pattern
+
+There is one more flag - an exclamation mark `!`. 
+It negates the pattern, and it can be put only in the front of a pattern.
+In other words, for a frame to match some `$! pattern`, the fame should not match the `pattern`.
+
+For example, `$+ A + B $* = $* B + A $! ph` will find different (but not all) frames related to commutativity 
+of addition which don't involve `wff` variables. Instead of `$! ph` it is possible to write `$! wff`, 
+because a typecode matches all variables of that type.
