@@ -78,7 +78,7 @@ You can combine multiple flags which don't contradict each other.
 For example, `$[+a ph -> ps $]` will find all frames which have adjacent symbols `ph -> ps` in its assertion.
 But if you want to find `$[+ ph -> ps]` in either a hypothesis or assertion 
 and specify the pattern `$[+ha ph -> ps $]` then this would be wrong.
-For the search engine, `$[+ha ph -> ps $]` means that `$[+ ph -> ps]` 
+For the search engine, `$[+ha ph -> ps $]` means that `$[+ ph -> ps $]` 
 must occur in a hypothesis and in the assertion at the same time,
 which is impossible. Instead, you can use the `s` flag `$[+s ph -> ps $]`.
 
@@ -86,3 +86,19 @@ which is impossible. Instead, you can use the `s` flag `$[+s ph -> ps $]`.
 
 The order of flags doesn't matter. So, `$[+s ph -> ps $]` is the same as `$[s+ ph -> ps $]`.
 
+#### Constructing more complex patterns with operators
+
+You can combine two or more sequences of symbols with operators to get more complex sequences.
+There are tree available operators:
+- `$*` - the "ordered" operator. 
+For example `$[+ A + B $] $* = $* $[+ B + A $]` will find all frames which have adjacent symbols `A + B`
+followed by `=` and followed by adjacent symbols `B + A`, with possibly other symbols in between this three groups.
+- `$/` - the "unordered" operator. 
+It is very similar to the "ordered" operator, but it doesn't keep the order of its operands.
+It is useful when you know what groups of symbols you want to find, but you don't know in which order they may
+appear in frames.
+- `$|` - the "one of" operator. 
+It creates a sequence of symbols that will match if any of its operand sequences matches.
+
+You can use different operators in the same pattern.
+Let's say you want to find
