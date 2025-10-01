@@ -36,7 +36,7 @@ between pattern's symbols.
 For example, `A + B + C` will match `( A + ( B + C ) )`;
 `ph -> ps` will match `( ph -> A. x ps )`.
 
-To disallow intervening symbols, surround the pattern symbols with square brackets and a plus sign `+`.
+To disallow intervening symbols, surround the pattern symbols with square brackets with a plus sign `+`.
 For example, `$[+ ph -> ps $]` will no longer match `( ph -> A. x ps )`.
 
 All the control symbols (like square brackets in the previous example `$[` and `$]`) within a pattern
