@@ -70,10 +70,10 @@ and the remaining results will be more useful, for example:
 <img src="../img/a_plus_b_eq_b_plus_a_asrt_only.png">
 
 These are all available flags which define the scope:
-- 'h' - any hypothesis statement.
-- 'H' - concatenation of all hypothesis statements (in the order of definition).
-- 'a' - the assertion statement.
-- 's' - any single statement (a hypothesis or assertion).
+- `h` - any hypothesis statement.
+- `H` - concatenation of all hypothesis statements (in the order of definition).
+- `a` - the assertion statement.
+- `s` - any single statement (a hypothesis or assertion).
 
 You can combine multiple flags which don't contradict each other.
 For example, `$[+a ph -> ps $]` will find all frames which have adjacent symbols `ph -> ps` in its assertion.
