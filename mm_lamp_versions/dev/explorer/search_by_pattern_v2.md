@@ -40,7 +40,7 @@ To disallow intervening symbols, surround the pattern symbols with square bracke
 For example, `$[+ ph -> ps $]` will no longer match `( ph -> A. x ps )`.
 
 All the control symbols (like square brackets in the previous example `$[` and `$]`) within a pattern
-should begin with the dollar sign `$`, because this is the only symbol which cannot occur in math symbols.
+should begin with the dollar sign `$`, because this is the only character which cannot occur in math symbols.
 Square brackets is the only type of brackets which can be used in patterns.
 
 A symbol immediately following the opening bracket `$[` is called a flag.
