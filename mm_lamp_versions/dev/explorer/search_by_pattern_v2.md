@@ -207,7 +207,7 @@ are two independent variables.
 
 There is one more flag - an exclamation mark `!`. 
 It negates a pattern, and it can be put only in the front of a pattern.
-In other words, for a frame to match some pattern `$! <pattern>`, the fame should not match `<pattern>`.
+In other words, for a frame to match some pattern `$! <pattern>`, this fame should not match `<pattern>`.
 
 For example, `$+ A + B $* = $* B + A $! ph` will find different frames related to commutativity 
 of addition which don't involve `wff` variables. Instead of `$! ph` it is possible to write `$! wff`, 
