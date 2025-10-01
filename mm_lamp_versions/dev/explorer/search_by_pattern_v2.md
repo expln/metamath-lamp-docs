@@ -54,7 +54,7 @@ When you don't know well enough the syntax of a particular Metamath database,
 you will tend to use non-adjacent symbols in patterns. 
 But this may lead to the problem that all pattern symbols are scattered around a frame,
 which leads to less useful search results. 
-For example, when trying to find the commutativity law using the pattern `A + B = B + A`,
+For example, when trying to find the commutative law using the pattern `A + B = B + A`,
 you may get this result:
 
 <img src="../img/a_plus_b_eq_b_plus_a_wrong.png">
