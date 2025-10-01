@@ -14,7 +14,7 @@ If the pattern sequence of symbols is a subsequence of a frame's sequence, then 
 A non-empty space separated sequence of math symbols is a valid pattern.
 
 Each constant in the pattern matches the same constant in a frame.
-If a constant is a typecode, then it matches any variable of this type.
+If a constant is a typecode, then it matches any variable of that type.
 
 A variable in the pattern matches a variable of the same type in a frame 
 (but not necessarily of the same name).
