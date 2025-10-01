@@ -154,18 +154,14 @@ When you use different operators in the same pattern you need to be aware of pre
 `$*` has the highest precedence. `$/` is of lower precedence. And `$|` has the lowest precedence. For example:
 - `A B $* C D $/ E F $* G H` is equivalent to `$[ A B $* C D $] $/ $[ E F $* G H $]`
 - `A B $/ C D $| E F $/ G H` is equivalent to `$[ A B $/ C D $] $| $[ E F $/ G H $]`
-- `A B $* C D $/ E F $* G H $| I J $* K L $/ M N $* O P` is equivalent to 
+- `A B $| C D $/ E F $* G H` is equivalent to 
 ```
-$[
-    $[ A B $* C D $] 
-    $/ 
-    $[ E F $* G H $]
-$]
+A B
 $|
 $[
-    $[ I J $* K L $]
+    C D
     $/ 
-    $[ M N $* O P $]
+    $[ E F $* G H $]
 $]
 ```
 
