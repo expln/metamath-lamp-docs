@@ -134,11 +134,11 @@ This pattern is written on multiple lines for better readability.
 You can copy it "as is" and paste to the "Pattern" text field on the Explorer tab and it will work.
 It is not required to write a pattern on a single line.
 
-#### Using less parenthesis
+#### Using less parentheses
 
-All previous examples used a lot of parenthesis. 
-Some of 
-But in many cases you can reduce amount of parenthesis in patterns.
+All previous examples used a lot of parentheses. 
+Some of them were redundant and could be just omitted. 
+Some of them could be eliminated by rearranging flags.
 
 You can put all the previously mentioned flags in the beginning of the pattern using the dollar sign `$`.
 This will make this flag to affect the entire pattern, unless it is overridden by another flag.
