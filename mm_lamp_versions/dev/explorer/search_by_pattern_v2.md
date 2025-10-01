@@ -43,9 +43,10 @@ All the control symbols (like square brackets in the previous example `$[` and `
 should begin with the dollar sign `$`, because this is the only symbol which cannot occur in math symbols.
 Square brackets is the only type of brackets which can be used in patterns.
 
-The plus sign `+` immediately following the opening bracket `$[` is called a flag.
-It instructs the search engine that all the symbols within this pair of brackets must be adjacent, 
-unless cancelled by a minus sign `-`. The usage of `-` to cancel `+` will be explained later.
+A symbol immediately following the opening bracket `$[` is called a flag.
+It instructs the search engine that all the symbols within this pair of brackets have some property.
+Particularly the `+` says all that symbols must be adjacent, 
+unless cancelled by a minus sign `-`. How to use the `-` to cancel the `+` will be explained later.
 
 #### The scope of the pattern symbols
 
@@ -93,6 +94,7 @@ There are tree available operators:
 - `$*` - the "ordered" operator. 
 For example `$[+ A + B $] $* = $* $[+ B + A $]` will find all frames which have adjacent symbols `A + B`
 followed by `=` and followed by adjacent symbols `B + A`, with possibly other symbols in between this three groups.
+<img src="../img/ordered_operator_example.png">
 - `$/` - the "unordered" operator. 
 It is very similar to the "ordered" operator, but it doesn't keep the order of its operands.
 It is useful when you know what groups of symbols you want to find, but you don't know in which order they may
@@ -101,4 +103,73 @@ appear in frames.
 It creates a sequence of symbols that will match if any of its operand sequences matches.
 
 You can use different operators in the same pattern.
-Let's say you want to find
+Let's say you work with `set.mm` or `iset.mm` Metamath database, 
+and you want to find all frames which may have a meaning of `A. x ph` implies `A. x ps`.
+For a frame to have such a meaning it should, at least, have `A. x ps` in the assertion statement.
+`A. x ps` should be in a hypothesis statement, or it should be in the assertion statement too,
+but then either `->` or `<->` should appear in between of `A. x ph` and `A. x ps`.
+The bellow pattern wils find such assertions:
+
+```
+$[
+    $[h+ A. x ph $]
+    $|
+    $[a $[+ A. x ph $] $* $[ -> $| <-> $] $]
+$]
+$*
+$[a+ A. x ps $]
+```
+
+<img src="../img/complex-pattern-1.png">
+
+This pattern is written on multiple lines for better readability.
+You can copy it "as is" and paste to the "Pattern" text field on the Explorer tab and it will work.
+You don't need to write all patterns on a single line.
+
+#### Using less parenthesis
+
+All previous examples used a lot of parenthesis.
+But in many cases you can reduce amount of parenthesis in patterns.
+
+You can put all the previously mentioned flags in the beginning of the pattern using the dollar sign `$`.
+This will make this flag to affect all the pattern, unless it is overridden by another flag 
+(if this doesn't create a contradiction).
+For example:
+- `$+ ph -> ps` is equivalent to `$[+ ph -> ps $]`.
+- `$a+ ph -> ps` is equivalent to `$[a+ ph -> ps $]`.
+
+Operators don't require their operands to be wrapped into parenthesis:
+- `A + B $* = $* B + A` is equivalent to `$[ A + B $] $* = $* $[ B + A $]`
+- `$+ A + B $* = $* B + A` is equivalent to `$[+ A + B $] $* = $* $[+ B + A $]`
+
+When you use different operators in the same pattern you need to be aware of precedence of operators.
+`$*` has the highest precedence. `$/` is of lower precedence. And `$|` has the lowest precedence. For example:
+- `A B $* C D $/ E F $* G H` is equivalent to `$[ A B $* C D $] $/ $[ E F $* G H $]`
+- `A B $/ C D $| E F $/ G H` is equivalent to `$[ A B $/ C D $] $| $[ E F $/ G H $]`
+- `A B $* C D $/ E F $* G H $| I J $* K L $/ M N $* O P` is equivalent to 
+```
+$[
+    $[ A B $* C D $] 
+    $/ 
+    $[ E F $* G H $]
+$]
+$|
+$[
+    $[ I J $* K L $]
+    $/ 
+    $[ M N $* O P $]
+$]
+```
+
+#### Overriding flags
+
+If you have multiple groups of symbols in your pattern,
+and the majority of them are adjacent, but a few of them should be non-adjacent,
+you can put the `+` at the beginning of the pattern and use the `-` inside of the pattern.
+For example, `$+ A B C $* $[- D E F $] $* G H I` is equivalent to `$[+ A B C $] $* D E F $* $[+ G H I $]`.
+
+The scope flags also can override each other, but only when this doesn't introduce a contradiction.
+For example, if you want to find all frames containing different groups of symbols with the restriction
+that each group must be inside a single statement, and some of the groups must be in hypotheses 
+and some in assertions,
+you can write a pattern similar to this one `$+s A B C $/ D E F $/ $[H G H I $/ J K L $] $/ $[a M N O $]`.
