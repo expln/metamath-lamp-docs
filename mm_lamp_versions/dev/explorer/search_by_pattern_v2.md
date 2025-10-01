@@ -43,7 +43,7 @@ All the control symbols (like square brackets in the previous example `$[` and `
 should begin with the dollar sign `$`, because this is the only character which cannot occur in math symbols.
 Square brackets is the only type of brackets which can be used in patterns.
 
-A symbol immediately following the opening bracket `$[` is called a flag.
+A character immediately following the opening bracket `$[` is called a flag.
 It instructs the search engine that all the symbols within this pair of brackets have some property.
 Particularly the `+` says all that symbols must be adjacent, 
 unless cancelled by a minus sign `-`. How to use the `-` to cancel the `+` will be explained later.
