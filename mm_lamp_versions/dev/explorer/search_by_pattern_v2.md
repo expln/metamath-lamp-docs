@@ -89,7 +89,7 @@ The order of flags doesn't matter. So, `$[+s ph -> ps $]` is the same as `$[s+ p
 #### Constructing more complex patterns with operators
 
 You can combine two or more sequences of symbols with operators to get more complex sequences.
-There are tree available operators:
+There are three available operators:
 - `$*` - the "ordered" operator. 
 For example `$[+ A + B $] $* = $* $[+ B + A $]` will find all frames which have adjacent symbols `A + B`
 followed by `=` and followed by adjacent symbols `B + A`, with possibly other symbols in between these three groups.
