@@ -175,11 +175,6 @@ and the majority of them are adjacent, and only a few of them should be non-adja
 you can put the `+` at the beginning of the pattern and use the `-` inside of the pattern.
 For example, `$+ A B C $* $[- D E F $] $* G H I` is equivalent to `$[+ A B C $] $* D E F $* $[+ G H I $]`.
 
-If you want to find all frames containing different groups of adjacent symbols with the restriction
-that each group must be located within a single statement, and some of the groups must be in hypotheses 
-and some in assertion,
-you can write a pattern similar to this one `$+ $[s A B C $] $/ $[h D E F $] $/ $[a G H I $]`.
-
 Taking into account all the rules related to simplifying patterns mentioned above, 
 the example pattern which finds `A. x ph` implies `A. x ps` may be simplified as follows:
 
