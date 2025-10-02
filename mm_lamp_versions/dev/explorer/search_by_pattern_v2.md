@@ -143,7 +143,7 @@ All previous examples used a lot of parentheses.
 Some of them were redundant and could be just omitted. 
 Some of them could be eliminated by rearranging flags.
 
-You can put all the previously mentioned flags in the beginning of the pattern using the dollar sign `$`.
+You can put all the previously mentioned flags in the beginning of a pattern using the dollar sign `$`.
 This will make this flag to affect the entire pattern, unless it is overridden by another flag.
 For example:
 - `$+ ph -> ps` is equivalent to `$[+ ph -> ps $]`.
