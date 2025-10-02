@@ -175,8 +175,6 @@ and the majority of them are adjacent, and only a few of them should be non-adja
 you can put the `+` at the beginning of the pattern and use the `-` inside of the pattern.
 For example, `$+ A B C $* $[- D E F $] $* G H I` is equivalent to `$[+ A B C $] $* D E F $* $[+ G H I $]`.
 
-The scope flags also can override each other, but only when this doesn't introduce a contradiction.
-
 If you want to find all frames containing different groups of adjacent symbols with the restriction
 that each group must be located within a single statement, and some of the groups must be in hypotheses 
 and some in assertion,
