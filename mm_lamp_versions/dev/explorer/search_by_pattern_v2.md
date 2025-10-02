@@ -121,7 +121,11 @@ The bellow pattern will find such assertions:
 $[
     $[h+ A. x ph $]
     $|
-    $[a $[+ A. x ph $] $* $[ -> $| <-> $] $]
+    $[a
+        $[+ A. x ph $]
+        $*
+        $[ -> $| <-> $]
+    $]
 $]
 $*
 $[a+ A. x ps $]
@@ -185,7 +189,11 @@ $+
 $[
     $[h A. x ph $]
     $|
-    $[a A. x ph $* $[ -> $| <-> $] $]
+    $[a
+        A. x ph
+        $*
+        $[ -> $| <-> $]
+    $]
 $]
 $*
 $[a A. x ps $]
