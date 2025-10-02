@@ -131,7 +131,7 @@ $[a+ A. x ps $]
 
 This pattern is written on multiple lines for better readability.
 You can copy it "as is" and paste to the "Pattern" text field on the Explorer tab and it will work.
-It is not required to write a pattern on a single line.
+It is not required to write patterns on a single line.
 
 #### Using less parentheses
 
