@@ -11,7 +11,7 @@ If the pattern sequence of symbols is a subsequence of a frame's sequence, then 
 
 #### The simplest pattern
 
-A non-empty space separated sequence of math symbols is a valid pattern.
+A non-empty space-separated sequence of math symbols is a valid pattern.
 
 Each constant in the pattern matches the same constant in a frame.
 If a constant is a typecode, then it matches any variable of that type.
@@ -30,9 +30,9 @@ In that case, `B` must match another variable in the frame.
 
 #### Adjacent and non-adjacent symbols
 
-If a pattern is just a space separated sequence of math symbols,
-then, when matching against a frame, arbitrary number of frame's symbols may appear
-between pattern's symbols. 
+If a pattern is just a space-separated sequence of math symbols, 
+then, when matching against a frame, an arbitrary number of the frame’s symbols 
+may appear between the pattern’s symbols. 
 For example, `A + B + C` will match `( A + ( B + C ) )`;
 `ph -> ps` will match `( ph -> A. x ps )`.
 
