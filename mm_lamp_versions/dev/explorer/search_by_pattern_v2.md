@@ -7,7 +7,7 @@ by concatenating all essential hypotheses (in the order of definition) and the a
 A pattern defines a sequence of math symbols which needs to be found within a frame's sequence.
 If the pattern sequence of symbols is a subsequence of a frame's sequence, then the frame matches the pattern.
 
-### The syntax of patterns
+### Syntax of patterns
 
 #### The simplest pattern
 
