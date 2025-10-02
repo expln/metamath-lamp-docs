@@ -105,7 +105,7 @@ appear in frames. For example, `$[+ -. B < A $] $/ <-> $/ $[+ A <_ B $]` will fi
 
 - `$|` - the "one of" operator. 
 It creates a sequence of symbols that will match if any of its operand sequences matches. 
-For example, `(/) $| C_` will match:
+For example, this single pattern `(/) $| C_` will find these two frames:
 <img src="../img/oneOf_operator_example.png">
 
 
