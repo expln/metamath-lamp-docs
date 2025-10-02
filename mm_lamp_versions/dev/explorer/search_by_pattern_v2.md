@@ -127,7 +127,7 @@ $*
 $[a+ A. x ps $]
 ```
 
-<img src="../img/complex-pattern-1.png">
+<img src="../img/complex_pattern_1.png">
 
 This pattern is written on multiple lines for better readability.
 You can copy it "as is" and paste to the "Pattern" text field on the Explorer tab and it will work.
