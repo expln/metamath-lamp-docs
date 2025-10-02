@@ -176,7 +176,7 @@ you can put the `+` at the beginning of the pattern and use the `-` inside of th
 For example, `$+ A B C $* $[- D E F $] $* G H I` is equivalent to `$[+ A B C $] $* D E F $* $[+ G H I $]`.
 
 The scope flags also can override each other, but only when this doesn't introduce a contradiction.
-For example, if you want to find all frames containing different groups of symbols with the restriction
+For example, if you want to find all frames containing different groups of adjacent symbols with the restriction
 that each group must be located within a single statement, and some of the groups must be in hypotheses 
 and some in assertion,
 you can write a pattern similar to this one `$+s A B C $/ D E F $/ $[H G H I $/ J K L $] $/ $[a M N O $]`.
