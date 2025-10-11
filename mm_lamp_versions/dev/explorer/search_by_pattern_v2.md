@@ -213,3 +213,18 @@ In other words, for a frame to match some pattern `$! <pattern>`, this fame shou
 For example, `$+ A + B $* = $* B + A $! ph` will find different frames related to the commutativity 
 of addition which don't involve `wff` variables. Instead of `$! ph` it is possible to write `$! wff`, 
 because a typecode matches all variables of that type.
+
+### Previous version of pattern search
+
+Before the pattern search described in this document, which is the version 2, 
+metamath-lamp had a less flexible [pattern search version 1](search_by_pattern.md). 
+The version 1 is deprecated now. 
+It is still supported but may be deleted in one of the future versions of metamath-lamp.
+
+### Pattern search settings
+
+On an Explorer tab select the "hamburger menu" -> "Pattern search parameters". 
+This will open a dialog which allows:
+1. Select the version of pattern search.
+2. Allow/disallow highlighting of matched symbols and the highligh color. 
+Highlighting of matched symbols is not supported by the pattern search version 1.

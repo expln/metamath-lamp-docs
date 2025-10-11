@@ -19,5 +19,4 @@ check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
 * Explorer
   - [Add assertions to an editor tab from an explorer tab](explorer/add_assertions_to_editor_from_explorer.md)
   - [Multiple Explorer tabs](explorer/multiple_explorer_tabs.md)
-  - [Search by pattern (version 1)](explorer/search_by_pattern.md)
-  - [Search by pattern (version 2)](explorer/search_by_pattern_v2.md)
+  - [Search by pattern](explorer/search_by_pattern_v2.md)
