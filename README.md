@@ -7,16 +7,16 @@ check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
 
 #### Content
 * Editor
-  - [Bookmark steps](mm_lamp_versions/v27/editor/bookmark_steps.md)
-  - [Delete unrelated steps](mm_lamp_versions/v27/editor/delete_unrelated_steps.md)
-  - [Inline theorems](mm_lamp_versions/v27/editor/inline_theorems.md)
-  - [Labels for hypotheses](mm_lamp_versions/v27/editor/labels_for_hypotheses.md)
-  - [Merge similar steps](mm_lamp_versions/v27/editor/merge_similar_steps.md)
-  - [Reorder steps automatically](mm_lamp_versions/v27/editor/reorder_steps_automatically.md)
-  - [Transform: Copy: X ⇒ ( ph -> X )](mm_lamp_versions/v27/editor/transform_copy_for_deduction.md)
-  - [Move steps to the top or bottom](mm_lamp_versions/v27/editor/move_multiple_steps.md)
-  - [Steps to use in the Bottom-Up prover](mm_lamp_versions/v27/editor/steps_in_bottom_up_prover.md)
+  - [Bookmark steps](mm_lamp_versions/v31/editor/bookmark_steps.md)
+  - [Delete unrelated steps](mm_lamp_versions/v31/editor/delete_unrelated_steps.md)
+  - [Inline theorems](mm_lamp_versions/v31/editor/inline_theorems.md)
+  - [Labels for hypotheses](mm_lamp_versions/v31/editor/labels_for_hypotheses.md)
+  - [Merge similar steps](mm_lamp_versions/v31/editor/merge_similar_steps.md)
+  - [Reorder steps automatically](mm_lamp_versions/v31/editor/reorder_steps_automatically.md)
+  - [Transform: Copy: X ⇒ ( ph -> X )](mm_lamp_versions/v31/editor/transform_copy_for_deduction.md)
+  - [Move steps to the top or bottom](mm_lamp_versions/v31/editor/move_multiple_steps.md)
+  - [Steps to use in the Bottom-Up prover](mm_lamp_versions/v31/editor/steps_in_bottom_up_prover.md)
 * Explorer
-  - [Add assertions to an editor tab from an explorer tab](mm_lamp_versions/v27/explorer/add_assertions_to_editor_from_explorer.md)
-  - [Multiple Explorer tabs](mm_lamp_versions/v27/explorer/multiple_explorer_tabs.md)
-  - [Search by pattern](mm_lamp_versions/v27/explorer/search_by_pattern.md)
+  - [Add assertions to an editor tab from an explorer tab](mm_lamp_versions/v31/explorer/add_assertions_to_editor_from_explorer.md)
+  - [Multiple Explorer tabs](mm_lamp_versions/v31/explorer/multiple_explorer_tabs.md)
+  - [Search by pattern](mm_lamp_versions/v31/explorer/search_by_pattern_v2.md)
