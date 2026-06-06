@@ -117,3 +117,68 @@ In this window you can select a macro module and then select a specific macro to
 
 Now you can just lick the "Show number of steps" to run the macro.
 
+### Persisting macros
+
+Now you can conveniently invoke the macro from the UI.
+But if you reload the page with mm-lamp, you'll notice that the macro has disappeared.
+This happens because `api.macro.registerMacroModule()` doesn't persist macros.
+You will need to open the console and run the below code to add the macro to the UI again.
+
+```js
+async function showNumberOfSteps() {
+    const editorState = await api.editor().getState()
+    await api.showInfoMsg({msg:`The number of steps is ${editorState.res.steps.length}`})
+}
+
+await api.macro.registerMacroModule({
+    moduleName: 'My macros',
+    macros: [
+        {
+            name: 'Show number of steps',
+            run: showNumberOfSteps
+        }
+    ]
+})
+```
+
+![img.png](re_register_showNumberOfSteps.png)
+
+Except that this is inconvenient, this approach has one significant disadvantage.
+When you run code like `async function showNumberOfSteps() { ... }` in the browser console,
+it makes the `showNumberOfSteps` a global function.
+In other words it places this function to the global namespace.
+This way, you can occasionally override some existing global function with the same name
+which may break mm-lamp functionality 
+(in the worst case, reloading of the browser tab with mm-lamp will be enough to remediate).
+
+To persist your macros such that they survive page reloads:
+
+1. Click the `Run a macro` button in the editor toolbar (a triangle shaped button).
+2. Click the small `+` button to the right of the dropdown with names of macro modules.
+3. Click the `Add new` button.
+4. Paste you code with macros to the `Script` text area 
+(for this example, the definition of the showNumberOfSteps function 
+and the invocation of api.macro.registerMacroModule, the content of the code snippet above).
+5. Type exactly the same name of the module in the `Module name` field as you pass in the `moduleName` input parameter
+of the `api.macro.registerMacroModule`. For this example it should be "My macros".
+If the value of `moduleName` attribute and the value in the `Module name` text field mismatch,
+nothing critical will happen, but you will be confused by mm-lamp behavior.
+6. Make sure the `Active` checkbox is selected.
+7. Click the `Save changes` button.
+8. Click the small `-` button to the right of the module name dropdown to hide additional UI elements.
+
+![](save_macros_in_ui.png)
+
+Mm-lamp will save the JavaScript code in the local storage of the browser
+and will run it each time mm-lamp loads in a browser tab.
+That's how macros will survive page reload.
+Moreover, mm-lamp wraps the provided code into an unonymous function before executing it for not to create
+global functions (all the global functions in the provided script become local functions 
+of the anonymose function wrapper, so they don't pollute the global namespace).
+
+The actual code mm-lamp will run on page load is as follows:
+
+```js
+const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
+(new AsyncFunction("... text of the script with macros ..."))();
+```
