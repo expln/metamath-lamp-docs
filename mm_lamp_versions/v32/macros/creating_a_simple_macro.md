@@ -78,3 +78,42 @@ Now you can invoke this function from the console
 This will show a message
 
 ![](window_with_number_of_steps.png)
+
+### Invoking a macro from the UI
+
+The `showNumberOfSteps` function is already a macro.
+But we need to open the console and type `await showNumberOfSteps()` each time we want to invoke it.
+This is inconvenient.
+We can "register" this function in mm-lamp UI, so we will be able to call it by clicking a button on the UI.
+We can achieve that using the `api.macro.registerMacroModule()` API function.
+
+```js
+await api.macro.registerMacroModule({
+    moduleName: 'My macros',
+    macros: [
+        {
+            name: 'Show number of steps',
+            run: showNumberOfSteps
+        }
+    ]
+})
+```
+![img.png](register_showNumberOfSteps.png)
+
+This code added our macro to the list of macros accessible via the "Run a macro" button (a small triangle) 
+available in the toolbar of each editor.
+All macros are grouped into modules. A module is just a list of macros.
+The above invocation of `api.macro.registerMacroModule()` has registered a module named `My macros`
+which contains one macro named `Show number of steps`.
+You can register multiple macros in a module by providing multiple objects of the form `{name:string, run:function}`
+in the `macros` input parameter of the `api.macro.registerMacroModule()`.
+
+![](run_macro_button.png)
+
+When you click the "Run a macro", a small modal window opens.
+In this window you can select a macro module and then select a specific macro to run.
+
+![](list_of_macros.png)
+
+Now you can just lick the "Show number of steps" to run the macro.
+
