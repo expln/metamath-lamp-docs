@@ -149,18 +149,18 @@ it makes the `showNumberOfSteps` a global function.
 In other words it places this function to the global namespace.
 This way, you can occasionally override some existing global function with the same name
 which may break mm-lamp functionality 
-(in the worst case, reloading of the browser tab with mm-lamp will be enough to remediate).
+(in the worst case, reloading the page with mm-lamp will be enough to remediate).
 
-To persist your macros such that they survive page reloads:
+To persist macros such that they survive page reloads do the following:
 
 1. Click the `Run a macro` button in the editor toolbar (a triangle shaped button).
 2. Click the small `+` button to the right of the dropdown with names of macro modules.
 3. Click the `Add new` button.
 4. Paste you code with macros to the `Script` text area 
 (for this example, the definition of the showNumberOfSteps function 
-and the invocation of api.macro.registerMacroModule, the content of the code snippet above).
-5. Type exactly the same name of the module in the `Module name` field as you pass in the `moduleName` input parameter
-of the `api.macro.registerMacroModule`. For this example it should be "My macros".
+and the invocation of api.macro.registerMacroModule, i.e. the content of the code snippet above).
+5. Type exactly the same name of the module in the `Module name` field as it is passed in the `moduleName` 
+input parameter of the `api.macro.registerMacroModule`. For this example it should be "My macros".
 If the value of `moduleName` attribute and the value in the `Module name` text field mismatch,
 nothing critical will happen, but you will be confused by mm-lamp behavior.
 6. Make sure the `Active` checkbox is selected.
