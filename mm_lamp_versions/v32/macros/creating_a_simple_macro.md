@@ -182,3 +182,14 @@ The actual code mm-lamp will run on page load is as follows:
 const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
 (new AsyncFunction("... text of the script with macros ..."))();
 ```
+
+Similarly, you can update the script of existing macros:
+
+1. Click the `Run a macro` button in the editor toolbar (a triangle shaped button).
+2. Select the module you want to update in the dropdown with names of macro modules. 
+2. Click the small `+` button to the right of the dropdown with names of macro modules.
+3. Update the script in the `Script` text area
+5. Make sure the value in the `Module name` field still matches the value passed in the `moduleName`
+   input parameter of the `api.macro.registerMacroModule`.
+7. Click the `Save changes` button.
+8. Click the small `-` button to the right of the module name dropdown to hide additional UI elements.
