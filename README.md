@@ -20,3 +20,5 @@ check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
   - [Add assertions to an editor tab from an explorer tab](mm_lamp_versions/v32/explorer/add_assertions_to_editor_from_explorer.md)
   - [Multiple Explorer tabs](mm_lamp_versions/v32/explorer/multiple_explorer_tabs.md)
   - [Search by pattern](mm_lamp_versions/v32/explorer/search_by_pattern_v2.md)
+* Macros
+  * [Creating a simple macro](mm_lamp_versions/v32/macros/creating_a_simple_macro.md)

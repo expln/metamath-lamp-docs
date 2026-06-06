@@ -166,7 +166,7 @@ which may break mm-lamp functionality
 To persist macros so that they survive page reloads, do the following:
 
 (if you are following this example step by step, then reload the page with mm-lamp
-to remove `My macros` registered through the console)
+to remove `My macros` registered through console)
 
 1. Click the `Run a macro` button in the editor toolbar (a triangle-shaped button).
 2. Click the small `+` button to the right of the dropdown with names of macro modules.
