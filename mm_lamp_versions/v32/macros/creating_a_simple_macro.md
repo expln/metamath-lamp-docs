@@ -42,6 +42,10 @@ In the example macro we will need to get the editor state (from which we will ge
 We can get the editor state by executing the `api.editor().getState()` API function directly in the console
 opened on the tab where the mm-lamp application is loaded.
 
+```js
+await api.editor().getState()
+```
+
 ![](get_editor_state_in_console.png)
 
 Usually API functions can be accessed as `api.someProperty.apiFunction(arguments)`.
@@ -50,6 +54,10 @@ The reason is that `api.editor` is a function that can accept an editor id.
 If you don't specify an editor id, the last opened editor will be used.
 
 To show a message we can use the `api.showInfoMsg()` function:
+
+```js
+await api.showInfoMsg({msg:'Some text'})
+```
 
 ![](showInfoMsg_example.png)
 
@@ -72,6 +80,10 @@ async function showNumberOfSteps() {
 ![](define_showNumberOfSteps.png)
 
 Now you can invoke this function from the console
+
+```js
+await showNumberOfSteps()
+```
 
 ![img.png](invoke_showNumberOfSteps.png)
 
@@ -152,6 +164,9 @@ which may break mm-lamp functionality
 (in the worst case, reloading the page with mm-lamp will be enough to remediate).
 
 To persist macros so that they survive page reloads, do the following:
+
+(if you are following this example step by step, then reload the page with mm-lamp
+to remove `My macros` registered through the console)
 
 1. Click the `Run a macro` button in the editor toolbar (a triangle-shaped button).
 2. Click the small `+` button to the right of the dropdown with names of macro modules.
