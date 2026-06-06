@@ -17,8 +17,8 @@ This macro will show the number of statements currently loaded in the editor.
 ### Running arbitrary JavaScript code in a web browser
 
 Before creating a macro let's see how we can run arbitrary JavaScript code in a web browser.
-Many contemporary web browsers allows access to a console where you can run JavaScript code.
-Usually you can open such console on any tab a menu. 
+Many contemporary web browsers allow access to a console where you can run JavaScript code.
+Usually you can open such console on any tab using a menu. 
 For exampe, this is how you can open it in Firefox:
 
 ![](open_browser_console.png)
@@ -33,12 +33,14 @@ The screenshot below shows a simple expression, variable definition, function de
 
 Mm-lamp defines a global variable `api`.
 Using this global variable you can access API functions exposed by mm-lamp.
-All API functions return a Future object.
+All API functions return 
+a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object.
 That means you need to prepend an API function invocation with the `await` keyword in the code if you want to get 
 the result of the function execution.
 
 In the example macro we will need to get the editor state (from which we will get the number of steps).
-We can get the editor state by executing the `api.editor().getState()` API function directly in the console.
+We can get the editor state by executing the `api.editor().getState()` API function directly in the console 
+opened on the tab where mm-lamp application is loaded.
 
 ![](get_editor_state_in_console.png)
 
@@ -54,3 +56,25 @@ To show a message we can use the `api.showInfoMsg()` function:
 This will open a small modal window:
 
 ![](a_small_modal_window.png)
+
+### Combining several API functions
+
+Let's combine `api.editor().getState()` and `api.showInfoMsg()` to show the number of steps in the editor.
+We can define a custom function in the console. 
+Notice the function is prepended with the `async` keyword.
+It is needed because the function uses `await` keyword inside.
+```js
+async function showNumberOfSteps() {
+    const editorState = await api.editor().getState()
+    await api.showInfoMsg({msg:`The number of steps is ${editorState.res.steps.length}`})
+}
+```
+![](define_showNumberOfSteps.png)
+
+Now you can invoke this function from the console
+
+![img.png](invoke_showNumberOfSteps.png)
+
+This will show a message
+
+![](window_with_number_of_steps.png)
