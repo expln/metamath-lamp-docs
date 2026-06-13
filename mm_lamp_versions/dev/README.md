@@ -1,8 +1,8 @@
-This is a collection of short documents describing selected features 
+This is a collection of short documents describing selected features
 of [Metamath-lamp](https://github.com/expln/metamath-lamp).
 
-It is not intended to be an introduction guide. 
-If you are new to the [Metamath system](https://us.metamath.org/) and/or Metamath-lamp, 
+It is not intended to be an introduction guide.
+If you are new to the [Metamath system](https://us.metamath.org/) and/or Metamath-lamp,
 check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
 
 #### Content
@@ -20,3 +20,5 @@ check [Metamath-lamp Guide](https://lamp-guide.metamath.org).
   - [Add assertions to an editor tab from an explorer tab](explorer/add_assertions_to_editor_from_explorer.md)
   - [Multiple Explorer tabs](explorer/multiple_explorer_tabs.md)
   - [Search by pattern](explorer/search_by_pattern_v2.md)
+* Macros
+  * [Creating a simple macro](macros/creating_a_simple_macro.md)
